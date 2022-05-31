@@ -30,7 +30,7 @@ const Dices = ({ dices, setDices, allDices, roll, setRoll }) => {
           <img
             className={dice.isLocked ? 'locked' : 'unlocked'}
             style={imgStyle}
-            src={roll ? gifImg : allDices[dice.title]}
+            src={roll && !dice.isLocked ? gifImg : allDices[dice.title]}
             onClick={() => lockDice(dice)}
             key={dice.id}
           ></img>
